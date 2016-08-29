@@ -1,0 +1,25 @@
+#Bật chức năng rewrite (Bật chức năng)
+RewriteEngine ON
+#Định nghĩa thư mục gốc của Web
+RewriteBase /
+#Bắt đầu viết luật URL
+
+RewriteRule ^gioi-thieu.html$ gioithieu.php
+
+RewriteRule ^san-pham.html$ sanpham.php
+
+RewriteRule ^tin-tuc.html$ tintuc.php
+
+RewriteRule ^lien-he.html$ lienhe.php
+
+RewriteRule ^san-pham/(.*)-([0-9]*).html$ sanpham.php?id_loaisp=$2
+
+RewriteRule ^san-pham/(.*)/trang([0-9]*)/$ sanpham.php?trang=$2
+
+RewriteRule ^san-pham/(.*)-([0-9]*)-p([0-9]*).html$ sanpham.php?id_loaisp=$2&trang=$3
+
+RewriteRule ^chi-tiet-san-pham/(.*)-([0-9]*).html$ chitietsp.php?id_sp=$2
+
+RewriteRule ^chi-tiet-tin-tuc/(.*)-([0-9]*).html$ chitiettintuc.php?id_tt=$2
+
+RewriteRule ^loai-san-pham/(.*)-([0-9]*).html$ sanpham.php?id_loaisp=$2
